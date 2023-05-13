@@ -32,6 +32,9 @@ function operate(operator, a, b) {
     }
 }
 
+// Still to do:
+//need to prevent division by 0, also need to clear number after result is shown on display after pressing '='
+
 
 const display = document.querySelector('#display');
 const secondDisplay = document.querySelector('#seconddisplay');

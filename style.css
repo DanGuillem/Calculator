@@ -5,8 +5,8 @@ body {
 }
 
 #container {
-    width: 20rem;
-    height: 30rem;
+    width: 30rem;
+    height: 45rem;
     background-color: lightpink;
     display: flex;
     flex-direction: column;
@@ -14,23 +14,56 @@ body {
 }
 
 .displays {
+    display: flex;
+    flex-direction: column;
     justify-content: right;
     align-items: flex-end;
     margin: 10px;
-    width: 15rem;
+    padding: 20px;
+    width: 21rem;
+    height: 20rem;
     background-color: aliceblue;
+    flex: 3;
+    overflow: auto;
+}
+
+#display {
+    font-size: 70px;
+    flex: 3;
+
+}
+
+#seconddisplay {
+    font-size: 30px;
     flex: 1;
+}
+
+.misc {
+    display: flex;
+    width: 21rem;
+    justify-content: space-between;
+}
+
+.misc button {
+    flex: 1;
+    width: 3rem;
+    font-size: 30px;
 }
 
 .operands {
     flex: 1;
 }
 
+.majorcontainer {
+    display: flex;
+    padding: 20px;
+}
+
 #numbercontainer {
     align-items: center;
     justify-content: center;
     flex: 2;
-    width: 15rem;
+    width: rem;
 }
 
 #numbercontainer div {
@@ -40,8 +73,23 @@ body {
 }
 
 #numbercontainer button {
-    height: 30px;
-    width: 30px;
+    height: 7rem;
+    width: 7rem;
+    font-size: 30px;
+}
+
+.operands {
+    display: flex;
+    padding-left: 15px;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.operands button {
+    height: 7rem;
+    width: 7rem;
+    font-size: 30px;
 }
 
 .misc {
