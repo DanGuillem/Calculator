@@ -46,6 +46,7 @@ let firstNum = 0;
 let secondNum = 0;
 let inputOperand = [];
 
+
 result = 0;
 
 
@@ -70,12 +71,23 @@ const opButtons = operandButtons.querySelectorAll('button');
 opButtons.forEach((button) => {
 
     button.addEventListener('click', () => {
-        firstNum += parseInt(display.textContent);
-        inputOperand += button.id;
-        secondDisplay.textContent = display.textContent += (" " + button.id + " ");
-        display.textContent = 0;
-    })
-})
+
+        if (firstNum == 0) {
+            firstNum = parseInt(display.textContent);
+            inputOperand = button.id;
+            secondDisplay.textContent = display.textContent += (" " + button.id + " ");
+            display.textContent = 0;
+        }
+        else {
+            secondNum = parseInt(display.textContent);
+            result = operate(inputOperand, firstNum, secondNum);
+            inputOperand = button.id;
+            firstNum = result;
+            secondDisplay.textContent = result += (" " + button.id + " ");
+            display.textContent = 0;
+        }
+    });
+});
 
 const clearButton = document.querySelector('#clear');
 
